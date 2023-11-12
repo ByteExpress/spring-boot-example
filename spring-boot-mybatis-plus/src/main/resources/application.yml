@@ -7,6 +7,8 @@ spring:
     username: root
     password: 123456
 
-mybatis:
+mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.byteexpress.springboot.mybatisplus.domain
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
