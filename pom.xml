@@ -17,6 +17,7 @@
         <module>spring-boot-mybatis-plus</module>
         <module>spring-boot-event</module>
         <module>spring-boot-schedule</module>
+        <module>spring-boot-redis</module>
     </modules>
 
     <packaging>pom</packaging>
