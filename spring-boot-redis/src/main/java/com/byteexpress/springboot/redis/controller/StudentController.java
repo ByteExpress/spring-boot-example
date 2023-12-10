@@ -1,8 +1,8 @@
 package com.byteexpress.springboot.redis.controller;
 
+import com.byteexpress.springboot.redis.annotation.Cache;
+import com.byteexpress.springboot.redis.annotation.ReloadCache;
 import com.byteexpress.springboot.redis.base.entity.R;
-import com.byteexpress.springboot.redis.cache.Cache;
-import com.byteexpress.springboot.redis.cache.ReloadCache;
 import com.byteexpress.springboot.redis.domain.Student;
 import com.byteexpress.springboot.redis.service.IStudentService;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +12,8 @@ import java.util.List;
 
 /**
  * 学生 controller
+ * @Author: ByteExpress
+ * @Date: 2023-11-12 22:02:10
  */
 @RestController
 @RequestMapping("/student")
@@ -26,7 +28,7 @@ public class StudentController {
     }
 
     @PutMapping
-    @ReloadCache(name = "get student")
+    @ReloadCache(name = "update student")
     public R update(@RequestBody Student student) {
         return R.ok(iStudentService.updateById(student));
     }

@@ -1,10 +1,10 @@
-package com.byteexpress.springboot.redis.cache;
+package com.byteexpress.springboot.redis.annotation;
 
 import java.lang.annotation.*;
 
 /**
  * 自定义注解类Cache
- * @Author: byteExpress
+ * @Author: ByteExpress
  * @Date: 2023-11-12 22:02:10
  */
 @Target(ElementType.METHOD)
@@ -23,5 +23,4 @@ public @interface Cache {
      * @return
      */
     String name() default "";
-
 }

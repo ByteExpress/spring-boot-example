@@ -1,6 +1,7 @@
-package com.byteexpress.springboot.redis.cache;
+package com.byteexpress.springboot.redis.aop;
 
 import com.alibaba.fastjson.JSON;
+import com.byteexpress.springboot.redis.annotation.Cache;
 import com.byteexpress.springboot.redis.base.entity.R;
 import com.byteexpress.springboot.redis.util.RedisUtils;
 import jakarta.annotation.Resource;
@@ -21,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 缓存切面
  *
- * @Author: byteExpress
+ * @Author: ByteExpress
  * @Date: 2023-11-12 22:02:10
  */
 @Component
@@ -35,7 +36,7 @@ public class CacheAspect {
      * aop切点
      * 拦截被指定注解修饰的方法
      */
-    @Pointcut("@annotation(com.byteexpress.springboot.redis.cache.Cache)")
+    @Pointcut("@annotation(com.byteexpress.springboot.redis.annotation.Cache)")
     public void cache() {
     }
 
