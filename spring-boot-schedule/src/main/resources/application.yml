@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+scheduled:
+  cron:
+    fullCron: 0/10 * * * * ?
+    # 任务间隔分钟数
+    interval: 15
