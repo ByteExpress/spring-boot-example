@@ -18,6 +18,7 @@
         <module>spring-boot-event</module>
         <module>spring-boot-schedule</module>
         <module>spring-boot-redis</module>
+        <module>spring-boot-attachment</module>
     </modules>
 
     <packaging>pom</packaging>
