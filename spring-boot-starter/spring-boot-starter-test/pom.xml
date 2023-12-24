@@ -3,24 +3,26 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>spring-boot-example</artifactId>
+		<artifactId>spring-boot-starter</artifactId>
 		<groupId>com.byteexpress</groupId>
 		<version>0.0.1</version>
-<!--		<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<groupId>com.byteexpress</groupId>
-	<artifactId>spring-boot-attachment</artifactId>
+	<artifactId>spring-boot-starter-test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-attachment</name>
-	<description>spring-boot-attachment</description>
+	<name>spring-boot-starter-test</name>
+	<description>spring-boot-starter-test</description>
 	<properties>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<groupId>com.byteexpress</groupId>
+			<artifactId>be-log-spring-boot-starter</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 

@@ -6,7 +6,7 @@
 		<artifactId>spring-boot-example</artifactId>
 		<groupId>com.byteexpress</groupId>
 		<version>0.0.1</version>
-		<relativePath/> <!-- lookup parent from repository -->
+<!--		<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
 	</parent>
 
 	<groupId>com.byteexpress</groupId>
