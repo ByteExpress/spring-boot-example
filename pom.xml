@@ -14,12 +14,13 @@
     <version>0.0.1</version>
 
     <modules>
-        <module>spring-boot-mybatis-plus</module>
-        <module>spring-boot-event</module>
-        <module>spring-boot-schedule</module>
-        <module>spring-boot-redis</module>
         <module>spring-boot-attachment</module>
+        <module>spring-boot-event</module>
+        <module>spring-boot-mybatis-plus</module>
+        <module>spring-boot-redis</module>
+        <module>spring-boot-schedule</module>
         <module>spring-boot-starter</module>
+        <module>spring-boot-thymeleaf</module>
     </modules>
 
     <packaging>pom</packaging>
