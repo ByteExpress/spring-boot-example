@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>电话</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${userList}">
+        <td th:text="${user.getName()}">name</td>
+        <td th:text="${user.getGender()}">male</td>
+        <td th:text="${user.getMobile()}">13811111111</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
