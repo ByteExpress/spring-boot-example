@@ -21,6 +21,7 @@
         <module>spring-boot-redis</module>
         <module>spring-boot-schedule</module>
         <module>spring-boot-starter</module>
+        <module>spring-boot-test</module>
         <module>spring-boot-thymeleaf</module>
         <module>spring-boot-webflux</module>
         <module>spring-boot-websocket</module>
