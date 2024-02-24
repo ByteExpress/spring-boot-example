@@ -14,6 +14,7 @@
     <version>0.0.1</version>
 
     <modules>
+        <module>spring-boot-actuator</module>
         <module>spring-boot-attachment</module>
         <module>spring-boot-event</module>
         <module>spring-boot-mybatis-plus</module>

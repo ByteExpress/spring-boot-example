@@ -1,0 +1,21 @@
+server:
+  port: 8080
+#actuator相关配置
+management:
+  endpoints:
+    web:
+      # actuator的访问路径，替换默认/actuator
+      base-path: /myActuator
+      # 设置是否暴露端点 默认只有health和info可见
+      exposure:
+        # include: env   # 方式1: 暴露端点env，配置多个以,隔开
+        include: "*"     # 方式2: 包括所有端点，注意需要添加引号
+        # 排除端点
+        exclude: shutdown
+  server:
+#    port: 9090  #新开监控端口，不和应用用同一个端口
+  endpoint:
+    health:
+      show-details: always # 显示db、redis、rabbti连接情况等
+    shutdown:
+      enabled: true  #默认情况下，除shutdown以外的所有端点均已启用。手动开启
