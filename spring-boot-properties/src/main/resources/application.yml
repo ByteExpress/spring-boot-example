@@ -23,14 +23,14 @@ spring:
 
 
 ---
-# Map
+# Map相关配置
 map:
-  # Map参数结合配置类配置示例
+  # 通过配置类配置示例
   byclass:
     property1:
       key1: 'value1'
       key2: 'value2'
-  # Map参数结合@Value配置示例, 因为yaml语法中如果一个值以 “{” 开头, YAML 将认为它是一个字典, 所以我们必须引用它必须用”"
+  # 通过@Value配置示例。因为yaml语法中如果一个值以{开头，YAML将认为它是一个字典, 所以我们引用它必须用"包起来
   byvalue:
     property1: "{
       key1: 'value1',
@@ -38,47 +38,42 @@ map:
     }"
 
 ---
-# List
+# List相关配置
 list:
-  # List参数结合配置类配置示例
+  # 通过配置类配置示例
   byclass:
+    #单行配置
     property1: topic1,topic2,topic3
+    #多行配置。@Value的方式也可以注入
     property2: 1,
       2,
       1,
       3
+    #多行配置。@Value的方式注入不了，只能用配置类的方式
     property3:
       - topic1
       - topic2
       - topic3
-  # List参数结合@Value配置示例
+  # 通过@Value配置示例
   byvalue:
+    #单行配置
     property1: topic1,topic2,topic3
+    #多行配置。
     property2: 1,
       2,
       1,
       3
 
 ---
+#随机生成值配置
 rd:
   #生成随机字母数字字符串
   randomString: ${random.value}
   #生成随机字符串（UUID）
   randomStringUuid: ${random.uuid}
+  #整型数字
   randomInt: ${random.int}
+  #按指定整型数字范围生成
   randomIntInRange: ${random.int[8080,9999]}
+  #长整型
   randomLong: ${random.long}
-
----
-myapp:
-  #引用其它属性
-  name: "vickcan"
-  greeting: "Hello, ${myapp.name}"
-  #条件判断
-  environment: "prod"
-  isProd: "#{myapp.environment == 'prod'}"
-  message: "#{environment['spring.profiles.active'] == 'dev' ? 'Hello, Developer!' : 'Hello, Guest!'}"
-  #执行方法调用
-  version: "#{T(java.lang.System).getProperty('java.version')}"
-  #使用正则表达式
-  email: "#{'example@example.com' matches '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}' ? 'valid' : 'invalid'}"

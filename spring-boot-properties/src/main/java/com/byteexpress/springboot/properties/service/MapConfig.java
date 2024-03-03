@@ -18,7 +18,6 @@ public class MapConfig {
     @Value("#{${map.byvalue.property1}}")
     private Map<String, String> property1;
 
-    // 在这里使用配置参数
     public void print() {
         System.out.println("Property1 Map: " + property1);
     }

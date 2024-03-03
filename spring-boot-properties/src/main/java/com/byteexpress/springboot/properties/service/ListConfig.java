@@ -19,13 +19,21 @@ import java.util.List;
 @Slf4j
 @Component
 public class ListConfig {
-
+    /**
+     * 单行配置，多个用,分隔（分隔符号可换）
+     */
     @Value("#{'${list.byvalue.property1}'.split(',')}")
     private List<String> property1;
 
+    /**
+     * 用数组接收，可以不用split
+     */
     @Value("#{'${list.byvalue.property1}'}")
     private String[] property3;
 
+    /**
+     * 多行配置，多个用,分隔（分隔符号可换）
+     */
     @Value("#{'${list.byvalue.property2}'.split(',')}")
     private List<String> property2;
 
