@@ -1,0 +1,84 @@
+server:
+  port: 8080
+
+# 数据库连接配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb
+    username: admin
+    password: secret
+
+  profiles:
+    default: main
+    # 可使用命令行切换。多个配置将取合集，且后续相同的配置将覆盖前一个
+    active: main, ext
+    # 不能使用命令行切换
+    include:
+      - main
+      - ext
+  # 引入扩展配置
+  config:
+    import:
+      - optional:classpath:/config/ext.yml
+
+
+---
+# Map
+map:
+  # Map参数结合配置类配置示例
+  byclass:
+    property1:
+      key1: 'value1'
+      key2: 'value2'
+  # Map参数结合@Value配置示例, 因为yaml语法中如果一个值以 “{” 开头, YAML 将认为它是一个字典, 所以我们必须引用它必须用”"
+  byvalue:
+    property1: "{
+      key1: 'value1',
+      key2: 'value2'
+    }"
+
+---
+# List
+list:
+  # List参数结合配置类配置示例
+  byclass:
+    property1: topic1,topic2,topic3
+    property2: 1,
+      2,
+      1,
+      3
+    property3:
+      - topic1
+      - topic2
+      - topic3
+  # List参数结合@Value配置示例
+  byvalue:
+    property1: topic1,topic2,topic3
+    property2: 1,
+      2,
+      1,
+      3
+
+---
+rd:
+  #生成随机字母数字字符串
+  randomString: ${random.value}
+  #生成随机字符串（UUID）
+  randomStringUuid: ${random.uuid}
+  randomInt: ${random.int}
+  randomIntInRange: ${random.int[8080,9999]}
+  randomLong: ${random.long}
+
+---
+myapp:
+  #引用其它属性
+  name: "vickcan"
+  greeting: "Hello, ${myapp.name}"
+  #条件判断
+  environment: "prod"
+  isProd: "#{myapp.environment == 'prod'}"
+  message: "#{environment['spring.profiles.active'] == 'dev' ? 'Hello, Developer!' : 'Hello, Guest!'}"
+  #执行方法调用
+  version: "#{T(java.lang.System).getProperty('java.version')}"
+  #使用正则表达式
+  email: "#{'example@example.com' matches '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}' ? 'valid' : 'invalid'}"
