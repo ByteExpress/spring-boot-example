@@ -17,6 +17,7 @@
         <module>spring-boot-actuator</module>
         <module>spring-boot-attachment</module>
         <module>spring-boot-event</module>
+        <module>spring-boot-l2cache</module>
         <module>spring-boot-mybatis-plus</module>
         <module>spring-boot-mybatis-plus-dynamic</module>
         <module>spring-boot-properties</module>
