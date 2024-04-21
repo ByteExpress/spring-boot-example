@@ -20,6 +20,7 @@
         <module>spring-boot-event</module>
         <module>spring-boot-exception</module>
         <module>spring-boot-l2cache</module>
+        <module>spring-boot-mail</module>
         <module>spring-boot-mybatis-plus</module>
         <module>spring-boot-mybatis-plus-dynamic</module>
         <module>spring-boot-properties</module>
