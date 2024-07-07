@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+#配置admin-server url
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+
+management:
+  #开启health信息
+  endpoint:
+    health:
+      show-details: always
+  #开启全部信息
+  endpoints:
+    web:
+      exposure:
+        include: '*'

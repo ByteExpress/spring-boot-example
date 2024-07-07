@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>spring-boot-admin</artifactId>
+        <groupId>com.byteexpress</groupId>
+        <version>0.0.1</version>
+    </parent>
+
+    <groupId>com.byteexpress</groupId>
+    <artifactId>spring-boot-admin-server</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>spring-boot-admin-server</name>
+    <description>spring-boot-admin-server</description>
+    <properties>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+    </dependencies>
+
+</project>
