@@ -17,6 +17,7 @@
         <module>spring-boot-actuator</module>
         <module>spring-boot-async</module>
         <module>spring-boot-attachment</module>
+        <module>spring-boot-design-pattern</module>
         <module>spring-boot-event</module>
         <module>spring-boot-exception</module>
         <module>spring-boot-l2cache</module>
