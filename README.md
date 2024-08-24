@@ -7,6 +7,8 @@
 | 模块                                                                   | 说明                                                            |
 |----------------------------------------------------------------------|---------------------------------------------------------------|
 | [spring-boot-actuator](spring-boot-actuator)                         | SpringBoot系列——actuator示例                                      |
+| [spring-boot-admin](spring-boot-admin)                         | SpringBoot系列——服务监控示例                                          |
+| [spring-boot-aop](spring-boot-aop)                          | SpringBoot系列——AOP实现统一日志打印                                     |
 | [spring-boot-async](spring-boot-async)                          | SpringBoot系列——@async实现异步调用                                    |
 | [spring-boot-attachment](spring-boot-attachment)                     | SpringBoot系列——附件上传下载                                          |
 | [spring-boot-event](spring-boot-event)                               | SpringBoot系列——事件发布与监听                                         |
